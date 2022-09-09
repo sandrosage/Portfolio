@@ -8,7 +8,7 @@ import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const form = useRef()
+  const refForm = useRef()
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,10 +21,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'gmail',
-        'template_YeJhZkgb',
-        form.current,
-        'your-token'
+        'service_jfjrmhm',
+        'template_qfjxeae',
+        refForm.current,
+        'yBpWDhuUXaFR7tYYa'
       )
       .then(
         () => {
@@ -54,7 +54,7 @@ const Contact = () => {
             don't hesitate to contact me using below form either.
           </p>
           <div className="contact-form">
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input placeholder="Name" type="text" name="name" required />
@@ -95,9 +95,9 @@ const Contact = () => {
           Germany
           <br />
           Simbach am Inn  84359 <br />
-          Simon-Breu-Str.14 <br />
+          {/* Simon-Breu-Str.14 <br /> */}
           <br />
-          <span>sandro-sage@gmx.de</span>
+          <span>sandrosage11@gmail.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer center={[48.26797314342528, 13.022610748027798]} zoom={13}>
